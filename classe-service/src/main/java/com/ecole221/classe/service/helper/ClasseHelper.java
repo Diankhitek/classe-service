@@ -16,15 +16,16 @@ public class ClasseHelper {
     public void checkClasse(ClasseDto classeDto){
         if (classeService.findByClasse(classeDto.getLibelleDto()) != null){
             throw new ClasseServiceException("La classe ["+classeDto.getLibelleDto()+"] existe déjà");
-        }if(classeDto.getFraisInscriptionDto()<=0){
+        }
+        /*if(classeDto.getFraisInscriptionDto()<=0){
             throw new ClasseServiceException("Les frais d'inscription doivent être positifs");
         }
         if(classeDto.getAutreFraisDto()<=0){
-            throw new ClasseServiceException("Les autres frais doivent être positifs");
+            throw new ClasseServiceException("Les autres frais doivent être positifssss");
         }
         if(classeDto.getMensualiteDto()<=0){
             throw new ClasseServiceException("La mensualité doit être positive");
         }
-
+*/
     }
 }

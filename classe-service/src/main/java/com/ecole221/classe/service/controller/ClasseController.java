@@ -8,7 +8,9 @@ import com.ecole221.classe.service.model.Classe;
 import com.ecole221.classe.service.repository.ClasseRepository;
 import com.ecole221.classe.service.service.ClasseService;
 import com.ecole221.classe.service.service.Iclasse;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.method.annotation.HandlerMethodValidationException;
 
 import java.util.List;
 
@@ -27,13 +29,13 @@ public class ClasseController {
         this.classeHelper = classeHelper;
     }
 
-    @GetMapping
+    @GetMapping(value = "gettAllClasse")
     public @ResponseBody List<ClasseDto> getAll() {
         return classeService.findAll().stream().map(mapper::classeEntityToClassDto).toList();
     }
 
     @PostMapping(value = "ajoutClasse")
-    public @ResponseBody Classe ajoutClasse(@RequestBody ClasseDto classeDto) {
+    public @ResponseBody Classe addClasse(@Valid @RequestBody ClasseDto classeDto) {
         try {
             classeHelper.checkClasse(classeDto);
             return classeService.save(mapper.classeDtoToClasseEntity(classeDto));

@@ -31,9 +31,8 @@ public class ClasseDto {
     private int mensualiteDto;
 
     @NotNull(message = "Autres frais Obligatoires!")
-    @Min(value = 1, message = "Les autres frais doivent être positifs")
+    @Min(value = 1, message = "Les autres frais doivent être positifs---")
     private int autreFraisDto;
-
 
     private FiliereDto filiereDto;
 
