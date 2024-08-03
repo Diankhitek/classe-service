@@ -6,13 +6,10 @@ import com.ecole221.classe.service.exception.ClasseServiceNotFoundException;
 import com.ecole221.classe.service.helper.ClasseHelper;
 import com.ecole221.classe.service.mapper.Mapper;
 import com.ecole221.classe.service.model.Classe;
-import com.ecole221.classe.service.repository.ClasseRepository;
-import com.ecole221.classe.service.service.ClasseService;
 import com.ecole221.classe.service.service.Iclasse;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.method.annotation.HandlerMethodValidationException;
 
 import java.util.List;
 
@@ -69,7 +66,7 @@ public class ClasseController {
     public ResponseEntity<String> updateClasse(@Valid @PathVariable long id, @RequestBody ClasseDto classeDto) {
         try {
             classeHelper.checkClasse(classeDto);
-            Classe updatedClasse = classeService.updateClasseById(id, mapper.classeDtoToClasseEntity(classeDto));
+            classeService.updateClasseById(id, mapper.classeDtoToClasseEntity(classeDto));
             return ResponseEntity.ok("Classe updated successfully");
         } catch (ClasseServiceNotFoundException e) {
             throw new ClasseServiceNotFoundException(e.getMessage());

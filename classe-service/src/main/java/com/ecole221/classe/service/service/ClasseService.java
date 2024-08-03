@@ -1,6 +1,6 @@
 package com.ecole221.classe.service.service;
 
-import com.ecole221.classe.service.dto.ClasseDto;
+
 import com.ecole221.classe.service.exception.ClasseServiceNotFoundException;
 import com.ecole221.classe.service.mapper.Mapper;
 import com.ecole221.classe.service.model.Classe;
@@ -11,11 +11,9 @@ import java.util.List;
 @Service
 public class ClasseService implements Iclasse {
     private final ClasseRepository classeRepository;
-    private final Mapper mapper;
 
     public ClasseService(ClasseRepository classeRepository, Mapper mapper) {
         this.classeRepository = classeRepository;
-        this.mapper = mapper;
     }
 
     @Override

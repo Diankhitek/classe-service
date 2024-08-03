@@ -1,7 +1,6 @@
 package com.ecole221.classe.service.dto;
 
-import com.ecole221.classe.service.model.Filiere;
-import jakarta.persistence.*;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -16,10 +16,7 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobaleServiceException {
 
-    private final View error;
-
     public GlobaleServiceException(View error) {
-        this.error = error;
     }
 
     @ResponseBody
