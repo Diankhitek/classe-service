@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 
 public class ClasseDto {
 
-    private Long idDto;
+    private long idDto;
 
     @NotBlank(message = "Code Classe Obligatoire")
     private String libelleDto;

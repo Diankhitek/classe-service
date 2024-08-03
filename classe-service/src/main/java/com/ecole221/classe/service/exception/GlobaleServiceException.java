@@ -34,7 +34,7 @@ public class GlobaleServiceException {
 
     @ResponseBody
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler(ClassNotFoundException.class)
+    @ExceptionHandler(ClasseServiceNotFoundException.class)
     public ErrorDto handleException(ClasseServiceNotFoundException exception){
         return ErrorDto.builder()
                 .code(HttpStatus.NOT_FOUND.value()+"")

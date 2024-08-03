@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Classe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     private String libelle;
     private int fraisInscription;

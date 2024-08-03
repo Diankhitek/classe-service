@@ -21,7 +21,7 @@ public class ClasseHelper {
             throw new ClasseServiceException("Les frais d'inscription doivent être positifs");
         }
         if(classeDto.getAutreFraisDto()<=0){
-            throw new ClasseServiceException("Les autres frais doivent être positifssss");
+            throw new ClasseServiceException("Les autres frais doivent être positifs");
         }
         if(classeDto.getMensualiteDto()<=0){
             throw new ClasseServiceException("La mensualité doit être positive");
