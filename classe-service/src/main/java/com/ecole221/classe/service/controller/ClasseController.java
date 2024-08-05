@@ -53,7 +53,7 @@ public class ClasseController {
             }
             Classe c = mapper.classeDtoToClasseEntity(classeDto);
 
-            System.out.println("MENNNN "+c.getMensualite());
+
             classeService.updateClasseById(id, c);
             return ResponseEntity.ok("Classe updated successfully");
         }catch (ClasseServiceException exception){
