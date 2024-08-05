@@ -28,7 +28,7 @@ public class ClasseController {
         this.classeHelper = classeHelper;
     }
 
-    @GetMapping(value = "gettAllClasse")
+    @GetMapping(value = "getAllClasse")
     public @ResponseBody List<ClasseDto> getAll() {
         return classeService.findAll().stream().map(mapper::classeEntityToClassDto).toList();
     }
@@ -42,10 +42,10 @@ public class ClasseController {
             throw new ClasseServiceException(exception.getMessage());
         }
     }
-/*
 
-    @PutMapping(value = "updateClasse/{id}")
-    public ResponseEntity<String> updateClasse(@Valid @PathVariable long id, @RequestBody ClasseDto classeDto) {
+
+/*    @PutMapping(value = "updateClasse/{id}")
+    public ResponseEntity<String> updateClasse(@Valid @PathVariable long id, @RequestBody ClasseDto classeDto1) {
         try {
             classeHelper.checkClasse(classeDto);
             if(classeService.findById(id)==null){
